@@ -1,0 +1,47 @@
+/* Code tidied up by ScrapBook */
+.comments-container { margin: 0px 0px 15px; width: auto; }
+.comments-container h1 { font-size: 36px; color: rgb(40, 48, 53); font-weight: 400; }
+.comments-container h1 a { font-size: 18px; font-weight: 700; }
+.comments-list { position: relative; padding-left: 0px; }
+.comments-list::before, .reply-list li::before { content: ""; width: 2px; height: 100%; background: rgb(199, 202, 203) none repeat scroll 0% 0%; position: absolute; left: 32px; top: 0px; }
+.comments-list::after { content: ""; position: absolute; background: rgb(199, 202, 203) none repeat scroll 0% 0%; bottom: 0px; left: 29px; width: 8px; height: 8px; border-radius: 50%; }
+.reply-list::after, .reply-list::before { display: none; }
+.reply-list li::before { width: 60px; height: 2px; top: 25px; left: -55px; }
+.comments-list li { margin-bottom: 15px; display: block; position: relative; }
+.reply-list { padding-left: 88px; clear: both; margin-top: 15px; }
+.comments-list .comment-avatar { width: 65px; height: 65px; position: relative; z-index: 99; float: left; overflow: hidden; background-color: rgb(226, 237, 245); }
+.comments-list .comment-avatar img { width: 100%; height: 100%; opacity: 0.25; padding: 10px; }
+.reply-list .comment-avatar { width: 50px; height: 50px; }
+.comment-main-level::after, .comments-list li::after { content: ""; width: 0px; height: 0px; display: block; clear: both; }
+.comments-list .comment-box { width: calc(100% - 90px); float: right; position: relative; border: 1px solid rgb(229, 229, 229); }
+.comments-list .comment-box::after, .comments-list .comment-box::before { content: ""; height: 0px; width: 0px; position: absolute; display: block; border-style: solid; }
+.comments-list .comment-box::after { border-width: 10px 12px 10px 0px; border-color: transparent rgb(252, 252, 252); top: 8px; left: -11px; }
+.comments-list .comment-box::before { border-width: 11px 13px 11px 0px; border-color: transparent rgb(229, 229, 229); left: -12px; top: 7px; }
+.reply-list .comment-box { width: calc(100% - 75px); }
+.comment-box .comment-head { background: rgb(252, 252, 252) none repeat scroll 0% 0%; padding: 10px 12px; border-bottom: 1px solid rgb(229, 229, 229); overflow: hidden; border-radius: 4px 4px 0px 0px; }
+.comment-box .comment-head i { float: right; margin-left: 14px; position: relative; top: 2px; color: rgb(166, 166, 166); cursor: pointer; transition: color 0.3s ease 0s; }
+.comment-box .comment-head i:hover { color: rgb(3, 101, 140); }
+.comment-box .comment-name { color: rgb(40, 48, 53); font-size: 14px; font-weight: 700; float: left; margin: 0px 10px 0px 0px; font-family: "Source Sans Pro",sans-serif; }
+.comment-box .comment-name a { color: rgb(40, 48, 53); }
+.comment-box .comment-head > span { float: left; color: rgb(153, 153, 153); font-size: 13px; position: relative; top: 0px; margin-right: 10px; }
+.comment-box .comment-content { background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding: 12px; font-size: 14px; color: rgb(89, 89, 89); border-radius: 0px 0px 4px 4px; }
+.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a { color: rgb(15, 112, 183); }
+.comment-box .comment-name.by-author::after { content: "author"; background: rgb(15, 112, 183) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 12px; padding: 3px 5px; font-weight: 700; margin-left: 10px; border-radius: 3px; }
+.addComment { margin-top: 30px; border-top: 1px solid rgb(229, 229, 229); padding-top: 30px; }
+.addComment h3 { margin-top: 0px; margin-bottom: 15px; }
+.addComment .btn { background-color: rgb(249, 149, 26); }
+.addComment form .form-group:last-child { margin-bottom: 0px; }
+.addComment input[type="text"], .addComment textarea { box-shadow: none; transition: all 150ms linear 0s; }
+.addComment input[type="text"]:focus, .addComment textarea:focus { box-shadow: none; background: rgb(233, 246, 255) none repeat scroll 0% 0%; }
+.addComment textarea { min-height: 150px; }
+@media screen and (max-width: 767px) {
+  .comment-box .comment-head > span { display: block; width: 100%; clear: both; }
+  .comment-box .comment-head i { float: left; margin-left: 0px; margin-right: 15px; margin-top: 15px; }
+}
+@media screen and (max-width: 479px) {
+  .comment-box .comment-content { font-size: 11px; }
+  .reply-list .comment-box { width: calc(100% - 0px); float: none; clear: both; }
+  .reply-list .comment-avatar { margin-bottom: 15px; }
+  .reply-list.comments-list .comment-box::before { left: 15px; top: -17px; transform: rotate(90deg); }
+  .reply-list.comments-list .comment-box::after { top: -15px; left: 16px; transform: rotate(90deg); }
+}

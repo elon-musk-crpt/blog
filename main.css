@@ -1,0 +1,139 @@
+/* Code tidied up by ScrapBook */
+@import url("css.css");
+body { padding-top: 50px; font-family: "Source Sans Pro",sans-serif; font-size: 14px; line-height: 1.45; }
+h1, h2, h3, h4, h5, h6 { font-family: "Merriweather",serif; line-height: 1.25; }
+p { margin-bottom: 15px; }
+p.lead { margin-bottom: 30px; }
+@media (min-width: 768px) {
+  p { font-size: 1.5em; margin-bottom: 15px; }
+  p.lead { font-size: 1.75em; margin-bottom: 30px; }
+}
+@media (max-width: 767px) {
+  p { font-size: 1.25em; margin-bottom: 15px; }
+  p.lead { font-size: 1.5em; margin-bottom: 30px; }
+}
+* > :last-child { margin-bottom: 0px; }
+nav.navbar-default { background-color: rgb(5, 55, 90); border: 0px none; }
+nav.navbar-default .navbar-nav > li > a { color: rgb(255, 255, 255); transition: all 150ms linear 0s; }
+nav.navbar-default .navbar-nav > li > a:hover { color: rgb(139, 168, 193); }
+.navbar-default .navbar-nav > li:not(.active) > a { position: relative; overflow: hidden; }
+.navbar-default .navbar-nav > li:not(.active) > a::after { content: ""; display: block; border-radius: 50%; background: rgba(255, 255, 255, 0.1) none repeat scroll 0% 0%; transition: all 150ms ease-in-out 0s; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; transform: scale(0); opacity: 0.5; }
+.navbar-default .navbar-nav > li:not(.active) > a:hover::after { transform: scale(1.5); opacity: 1; }
+@media (min-width: 768px) {
+  nav.navbar-default .navbar-nav > li { border-right: 1px solid rgba(255, 255, 255, 0.15); }
+}
+nav.navbar-default .navbar-toggle { border-color: rgba(255, 255, 255, 0.15); }
+nav.navbar-default .navbar-toggle .icon-bar { background-color: rgb(255, 255, 255); }
+nav.navbar-default .navbar-toggle:focus, nav.navbar-default .navbar-toggle:hover { background-color: rgb(15, 112, 183); }
+nav .navbar-brand img { max-height: 20px; }
+.navbar-default .navbar-nav > .active > a { background: rgb(15, 112, 183) none repeat scroll 0% 0%; color: rgb(211, 231, 245); }
+.navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover { background: rgb(15, 112, 183) none repeat scroll 0% 0%; color: rgb(211, 231, 245); }
+#mainNav .navbar-form { position: relative; }
+#mainNav .navbar-form input { border-color: rgb(255, 255, 255); box-shadow: none; transition: all 150ms linear 0s; padding-right: 50px; }
+#mainNav .navbar-form input:focus { border-color: rgb(255, 255, 255); box-shadow: none; background: rgb(233, 246, 255) none repeat scroll 0% 0%; }
+#mainNav .navbar-form button { position: absolute; right: 15px; border-radius: 0px 4px 4px 0px; background: rgb(15, 112, 183) none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-color: rgb(15, 112, 183); }
+@media (min-width: 768px) {
+  #mainNav .navbar-form button { top: 0px; }
+}
+@media (max-width: 767px) {
+  #mainNav .navbar-form button { top: 10px; }
+}
+@media (min-width: 1200px) {
+  .navbar-form .form-control { min-width: 360px; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-form .form-control { min-width: 374px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-form .form-control { min-width: 200px; }
+}
+@media (max-width: 767px) {
+  .navbar-form .form-group { margin-bottom: 0px; }
+}
+footer, header { background: rgb(239, 239, 239) none repeat scroll 0% 0%; }
+header h1 { margin: 0px 0px 15px; }
+header .articleDetails { margin: 0px; font-size: 1.25em; }
+header .articleDetails .articleAuthor { margin-right: 15px; }
+header .articleDetails .articleDate { margin-right: 15px; color: rgb(15, 112, 183); white-space: nowrap; }
+header .articleDetails .articleShared { margin-right: 15px; color: rgb(136, 136, 136); white-space: nowrap; }
+header .articleDetails .sharing { white-space: pre; }
+header .articleDetails .sharing a { margin-right: 10px; opacity: 1; transition: opacity 150ms linear 0s; }
+header .articleDetails .sharing a:hover { opacity: 0.75; }
+header .articleDetails .sharing a .fa-facebook-f { color: rgb(38, 74, 212); }
+header .articleDetails .sharing a .fa-twitter { color: rgb(84, 188, 255); }
+header .articleDetails .sharing a .fa-envelope { color: rgb(146, 176, 184); }
+header .articleDetails .sharing a .fa-rss { color: rgb(232, 132, 19); }
+header .articleDetails > span { display: inline-block; margin-bottom: 10px; }
+@media (min-width: 768px) {
+  header { padding: 45px 0px 35px; }
+}
+@media (max-width: 767px) {
+  header { padding: 30px 0px 20px; }
+}
+@media (min-width: 768px) {
+  header h1 { font-size: 4.5rem; }
+}
+@media (max-width: 767px) {
+  header h1 { font-size: 3rem; }
+}
+@media (min-width: 768px) {
+  article { padding: 45px 0px; }
+}
+@media (max-width: 767px) {
+  article { padding: 30px 0px; }
+}
+article a { text-decoration: underline; }
+article a:hover, aside .greyContainer .relatedStory .relatedStoryHeadline:hover { text-decoration: none; }
+main { counter-reset: articleno; }
+main h2 { color: rgb(15, 112, 183); margin: 45px 0px 30px; border-bottom: 1px solid rgb(239, 239, 239); padding-bottom: 15px; }
+main h2::before { counter-increment: articleno; content: counter(articleno, decimal) " — "; }
+main .articleImgTitle { margin-bottom: 30px; border: 1px solid rgb(206, 206, 206); padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+main .articleImgTitle img { width: 100%; }
+main .inlineQuote { font-style: italic; }
+@media (min-width: 768px) {
+  main h2 { font-size: 3.5rem; }
+}
+@media (max-width: 767px) {
+  main h2 { font-size: 2.5rem; }
+}
+.articleSteps { font-size: 1.5em; margin-bottom: 30px; border: 1px solid rgb(206, 206, 206); padding: 30px 30px 15px; }
+.articleSteps .articleStep { margin-bottom: 15px; }
+.articleSteps .articleStep .articleStepHeading { display: block; font-size: 1.25em; color: rgb(15, 112, 183); font-family: "Merriweather",serif; }
+aside .greyContainer { background: rgb(239, 239, 239) none repeat scroll 0% 0%; padding: 25px 30px 30px; border-top: 5px solid rgb(5, 55, 90); }
+aside .greyContainer h3 { margin: 0px 0px 15px; color: rgb(5, 55, 90); }
+aside .greyContainer .relatedStory:not(:last-of-type) { border-bottom: 1px solid rgb(206, 206, 206); margin-bottom: 15px; padding-bottom: 15px; }
+aside .greyContainer .relatedStory img { width: 85px; height: auto; float: left; margin-right: 10px; margin-top: 5px; }
+aside .greyContainer .relatedStory .relatedStoryHeadline { display: block; font-size: 1.25em; text-decoration: underline; line-height: 1.3; margin-bottom: 5px; }
+aside .bannerContainer { width: 100%; margin-top: 30px; }
+@media (min-width: 992px) {
+  aside #stickyItem .articleSteps { margin-bottom: 0px; }
+}
+@media (max-width: 991px) {
+  aside .greyContainer { margin-top: 30px; }
+}
+section.comments { border-top: 1px solid rgb(206, 206, 206); }
+section.comments h2 { margin: 0px 0px 30px; color: rgb(5, 55, 90); font-size: 2.25em; }
+@media (min-width: 768px) {
+  section.comments { padding: 45px 0px; }
+}
+@media (max-width: 767px) {
+  section.comments { padding: 30px 0px; }
+}
+footer img.img-responsive { max-width: 160px; opacity: 0.25; }
+footer .footerLinks a { color: rgb(206, 206, 206); display: inline-block; text-decoration: underline; }
+footer .footerLinks a:hover { opacity: 0.8; text-decoration: none; }
+footer .copyright { color: rgb(206, 206, 206); }
+@media (min-width: 768px) {
+  footer { padding: 45px 0px; }
+}
+@media (max-width: 767px) {
+  footer { padding: 30px 0px; }
+  footer .footerLinks { border-top: 1px solid rgb(206, 206, 206); padding-top: 30px; }
+  footer img.img-responsive { margin-bottom: 30px; }
+}
+@media (min-width: 768px) {
+  footer .footerLinks a { margin: 0px 20px 0px 0px; }
+}
+@media (max-width: 767px) {
+  footer .footerLinks a { margin: 0px 20px 20px 0px; }
+}
